@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Teammate from './Teammate.js'
+import Teammate from './components/Teammate.js'
 
 
 function App() {
@@ -13,7 +13,15 @@ function App() {
     email: 'jkcrawshaw@gmail.com',
     role: 'Front-End Developer'
 
+  },
+
+  { 
+    name: 'Brendan',
+    email: 'bsull05@yahoo.com',
+    role: 'Back-End Developer'
+  
   }
+
 
  ]
  
