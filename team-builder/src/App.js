@@ -1,26 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Teammate from './Teammate.js'
+
 
 function App() {
+
+ const initalTeammates = [
+
+  {
+    name: 'Jamie',
+    email: 'jkcrawshaw@gmail.com',
+    role: 'Front-End Developer'
+
+  }
+
+ ]
+ 
+  
+
+const [teammates, setTeammates] = useState(initalTeammates)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div class='App'>
+
+      <h1>Meet My Teammates </h1>
+
+      {
+        teammates.map(teammate => {
+          return (
+          <Teammate name = {teammate.name} email ={teammate.email} role={teammate.role} />
+          )
+        })
+      }
+
+      <button>Join Our Team!</button>
+
+
     </div>
-  );
+   
+  )
 }
 
 export default App;
